@@ -7,6 +7,7 @@ btn.addEventListener('click', async function() {
     };
 
     if (pass.password == '' || pass.password == undefined) {
+        document.getElementById('warning').style.display = 'block';
         return false;
     }
 
@@ -19,6 +20,7 @@ btn.addEventListener('click', async function() {
     console.log(response);
 
     if (response.status !== 200) {
+        document.getElementById('warning').style.display = 'block';
         return false;
     }
 

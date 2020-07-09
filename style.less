@@ -1,5 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Dosis:wght@500&display=swap');
 
+@keyframes fade {
+    0% {
+        opacity: 100%;
+        transform: translateY(-300px);
+    }
+
+    50% {
+        opacity: 70%;
+        margin-top: -25px;
+        transform: translateY(-250px);
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -26,6 +43,22 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+
+                #warning {
+                    display: none;
+                    position: absolute;
+                    bottom: 50px;
+                    padding: 5px 20px;
+                    border-radius: 5px;
+                    background: rgb(252, 248, 56);
+                    color: #333;
+                    font-weight: bold;
+                    transition: 300ms all;
+                    animation-timing-function: ease-in-out;
+                    animation-name: fade;
+                    animation-duration: 3.5s;
+                    animation-fill-mode: forwards;
+                }
 
                 h1 {
                     font-family: 'Anton', sans-serif;
