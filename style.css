@@ -1,0 +1,231 @@
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Anton Regular'), local('Anton-Regular'), url(https://fonts.gstatic.com/s/anton/v11/1Ptgg87LROyAm0K0.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dosis/v18/HhyJU5sn9vOmLxNkIwRSjTVNWLEJBbMV3A.ttf) format('truetype');
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* body {
+  font-family: 'Dosis', sans-serif;
+  background-color: #111;
+  overflow-y: hidden;
+  background-image: url('carmo.jpg');
+  background-size: cover;
+}
+* body .password-wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 200px;
+}
+* body .password-wrapper .password-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+* body .password-wrapper .password-box h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: 48px;
+  color: #f5f5f5;
+  margin-bottom: 50px;
+}
+* body .password-wrapper .password-box .input-box {
+  display: flex;
+  flex-direction: row;
+  align-items: space-between;
+}
+* body .password-wrapper .password-box .input-box input {
+  border: 1px solid #222;
+  border-radius: 5px;
+  width: 380px;
+  padding: 10px 40px;
+  height: 50px;
+  color: #fff;
+  background-color: #333;
+  margin-right: 50px;
+  font-size: 20px;
+}
+* body .password-wrapper .password-box .input-box button {
+  border: 1px solid #222;
+  border-radius: 5px;
+  padding: 10px 40px;
+  height: 50px;
+  color: #fff;
+  background-color: #333;
+  font-size: 20px;
+  transition: 300ms all;
+}
+* body .password-wrapper .password-box .input-box button:hover {
+  background-color: #252525;
+  cursor: pointer;
+}
+* body .sheet-wrapper {
+  height: 100vh;
+  width: 100%;
+  display: none;
+  flex-direction: column;
+}
+* body .sheet-wrapper .header {
+  padding: 50px 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+* body .sheet-wrapper .header .picture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+* body .sheet-wrapper .header .picture img {
+  width: 150px;
+  border-radius: 50%;
+  display: none;
+}
+@media screen and (max-width: 705px) {
+  * body .sheet-wrapper .header .picture img {
+    width: 75px;
+  }
+}
+* body .sheet-wrapper .header .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+* body .sheet-wrapper .header .text h1 {
+  color: #ffffff;
+  font-size: 52px;
+}
+* body .sheet-wrapper .header .text p {
+  font-size: 24px;
+  color: #e75850;
+}
+* body .sheet-wrapper .sheet {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-around;
+  width: 100%;
+}
+@media screen and (max-width: 1250px) {
+  * body .sheet-wrapper .sheet {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+}
+* body .sheet-wrapper .sheet .info {
+  margin: 0 5px;
+  margin-bottom: 50px;
+}
+* body .sheet-wrapper .sheet .info .title {
+  padding: 50px 200px;
+  background: #222;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+* body .sheet-wrapper .sheet .info .title h2 {
+  color: #f5f5f5;
+  font-size: 32px;
+}
+* body .sheet-wrapper .sheet .info .box {
+  padding: 25px 25px;
+  background: #252525;
+}
+* body .sheet-wrapper .sheet .info .box .row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  text-align: center;
+  transition: 250ms all;
+}
+* body .sheet-wrapper .sheet .info .box .row:hover {
+  background: #292929;
+  cursor: default;
+}
+* body .sheet-wrapper .sheet .info .box .row span {
+  color: #f5f5f5;
+  font-size: 22px;
+}
+* body .sheet-wrapper .sheet .info .box .row p {
+  color: #f5f5f5;
+  font-size: 22px;
+}
+* body .sheet-wrapper .sheet .skills {
+  margin: 0 5px;
+}
+* body .sheet-wrapper .sheet .skills .title {
+  padding: 50px 200px;
+  background: #222;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+* body .sheet-wrapper .sheet .skills .title h2 {
+  color: #f5f5f5;
+  font-size: 32px;
+}
+* body .sheet-wrapper .sheet .skills .group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+}
+* body .sheet-wrapper .sheet .skills .group .box {
+  padding: 25px;
+  background: #252525;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+* body .sheet-wrapper .sheet .skills .group .box .skill-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid #444;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+}
+* body .sheet-wrapper .sheet .skills .group .box .skill-title span {
+  color: #f5f5f5;
+  font-size: 26px;
+}
+* body .sheet-wrapper .sheet .skills .group .box .row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  text-align: center;
+  transition: 250ms all;
+}
+* body .sheet-wrapper .sheet .skills .group .box .row:hover {
+  background: #292929;
+  cursor: default;
+}
+* body .sheet-wrapper .sheet .skills .group .box .row span {
+  color: #f5f5f5;
+  font-size: 22px;
+}
+* body .sheet-wrapper .sheet .skills .group .box .row p {
+  color: #f5f5f5;
+  font-size: 22px;
+}

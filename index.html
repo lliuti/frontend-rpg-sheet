@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://css.gg/key.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="spy.svg" type="image/x-icon">
+    <title>A Organização</title>
+</head>
+<body>
+    <div id="password-wrapper" class="password-wrapper">
+        <div class="password-box">
+            <h1>Insira o código do personagem</h1>
+            <div class="input-box">
+                <input type="text" id="pass">
+                <button id="btn">
+                    <i class="gg-key"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="sheet-wrapper" class="sheet-wrapper">
+        <div class="header">
+            <div class="picture">
+                <img id="img1" src=./katana.jpg alt="">
+                <img id="img2" src=./microscope.jpg alt="">
+                <img id="img3" src=./cross.jpg alt="">
+                <img id="img4" src=./owl.jpg alt="">
+            </div>
+            <div class="text">
+                <h1 id="cName">Prado Inagawa</h1>
+                <p id="cJob">Membro da Yakuza</p>
+            </div>
+        </div>
+        <div class="sheet">
+            <div class="info">
+                <div class="title">
+                    <h2>Dados</h2>
+                </div>
+                <div class="box">
+                    <div class="row">
+                        <span>Idade:</span>
+                        <p id="cAge">19</p>
+                    </div>
+                    <div class="row">
+                        <span>Altura:</span>
+                        <p id="cHeight">1,65m</p>
+                    </div>
+                    <div class="row">
+                        <span>Peso:</span>
+                        <p id="cWeight">65kg</p>
+                    </div>
+                    <div class="row">
+                        <span>Cabelo:</span>
+                        <p id="cHair">Dreadlocks curtos</p>
+                    </div>
+                    <div class="row">
+                        <span>Olhos:</span>
+                        <p id="cEyes">Escuros</p>
+                    </div>
+                </div>
+            </div>
+            <div class="skills">
+                <div class="title">
+                    <h2>Atributos</h2>
+                </div>
+                <div class="group">
+                    <div class="box">
+                        <div class="skill-title">
+                            <span>Físicos</span>
+                        </div>
+                        <div class="skill-group">
+                            <div class="row">
+                                <span>Força</span>
+                                <p id="cStrength">3</p>
+                            </div>
+                            <div class="row">
+                                <span>Atletismo</span>
+                                <p id="cStamina">2</p>
+                            </div>
+                            <div class="row">
+                                <span>Destreza</span>
+                                <p id="cDexterity">4</p>
+                            </div>
+                            <div class="row">
+                                <span>Agilidade</span>
+                                <p id="cSpeed">1</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="skill-title">
+                            <span>Mentais</span>
+                        </div>
+                        <div class="skill-group">
+                            <div class="row">
+                                <span>Inteligência</span>
+                                <p id="cInt">2</p>
+                            </div>
+                            <div class="row">
+                                <span>Percepção</span>
+                                <p id="cPerception">4</p>
+                            </div>
+                            <div class="row">
+                                <span>Carisma</span>
+                                <p id="cCharisma">1</p>
+                            </div>
+                            <div class="row">
+                                <span>Lábia</span>
+                                <p id="cGuile">3</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="skill-title">
+                            <span>Gerais</span>
+                        </div>
+                        <div class="skill-group">
+                            <div class="row">
+                                <span>Direção</span>
+                                <p id="cDriving">1</p>
+                            </div>
+                            <div class="row">
+                                <span>Procurar</span>
+                                <p id="cSearch">2</p>
+                            </div>
+                            <div class="row">
+                                <span>Leitura</span>
+                                <p id="cReading">3</p>
+                            </div>
+                            <div class="row">
+                                <span>Furtividade</span>
+                                <p id="cSneak">4</p>
+                            </div>
+                            <div class="row">
+                                <span>Furtar</span>
+                                <p id="cStealing">5</p>
+                            </div>
+                            <div class="row">
+                                <span>Audição</span>
+                                <p id="cListening">6</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

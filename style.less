@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Dosis:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    body {
+        // font-family: 'Anton', sans-serif; // Title font
+        font-family: 'Dosis', sans-serif; // Regular font
+        background-color: #111;
+        overflow-y: hidden;
+        background-image: url('./carmo.jpg');
+        background-size: cover;
+
+        .password-wrapper {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 200px;
+
+            .password-box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                h1 {
+                    font-family: 'Anton', sans-serif;
+                    font-size: 48px;
+                    color: #f5f5f5;
+                    margin-bottom: 50px;
+                }
+
+                .input-box {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: space-between;
+
+                    input {
+                        border: 1px solid #222;
+                        border-radius: 5px;
+                        width: 380px;
+                        padding: 10px 40px;
+                        height: 50px;
+                        color: #fff;
+                        background-color: #333;
+                        margin-right: 50px;
+                        font-size: 20px;
+                    }
+
+                    button {
+                        border: 1px solid #222;
+                        border-radius: 5px;
+                        padding: 10px 40px;
+                        height: 50px;
+                        color: #fff;
+                        background-color: #333;
+                        font-size: 20px;
+                        transition: 300ms all;
+
+                        &:hover {
+                            background-color: #252525;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+
+        .sheet-wrapper {
+            height: 100vh;
+            width: 100%;
+            display: none;
+            flex-direction: column;
+
+            .header {
+                padding: 50px 100px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+
+                .picture {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        width: 150px;
+                        border-radius: 50%;
+                        display: none;
+
+                        @media screen and (max-width: 705px) {
+                            width: 75px;
+                        } 
+                    }
+                }
+
+                .text {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    h1 {
+                        color: #ffffff;
+                        font-size: 52px;
+                    }
+
+                    p {
+                        font-size: 24px;
+                        color: #e75850;
+                    }
+                }
+            }
+
+            .sheet {
+                display: flex;
+                flex-direction: row;
+                align-items: start;
+                justify-content: space-around;
+                width: 100%;
+
+                @media screen and (max-width: 1250px) { 
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    width: 100%;
+                }
+
+                .info {
+                    margin: 0 5px;
+                    margin-bottom: 50px;
+
+                    .title {
+                        padding: 50px 200px;
+                        background: #222;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: center;
+
+                        h2 {
+                            color: #f5f5f5; 
+                            font-size: 32px;    
+                        }
+                    }
+
+                    .box {
+                        padding: 25px 25px;
+                        background: #252525;
+
+                        .row {
+                            // display: flex;
+                            // flex-direction: row;
+                            // align-items: center;
+                            // justify-content: space-around;
+
+                            display: grid;
+                            grid-template-columns: repeat(2,1fr);
+                            grid-gap: 20px;
+                            text-align: center;
+
+                            transition: 250ms all;
+
+                                &:hover {
+                                    background: #292929;
+                                    cursor: default;
+                                }
+
+                            span {
+                                color: #f5f5f5;
+                                font-size: 22px;
+                            }
+
+                            p {
+                                color: #f5f5f5;
+                                font-size: 22px;
+                            }
+                        }
+                    }
+                }
+
+                .skills {
+                    margin: 0 5px;
+
+                    .title {
+                        padding: 50px 200px;
+                        background: #222;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: center;
+
+                        h2 {
+                            color: #f5f5f5;
+                            font-size: 32px;
+                        }
+                    }
+
+                    .group {
+                        display: grid;
+                        grid-template-columns: repeat(3,1fr);
+                        grid-gap: 5px;
+
+                        .box {
+                            padding: 25px;
+                            background: #252525;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+    
+                            .skill-title {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                justify-content: space-around;
+                                border-bottom: 1px solid #444;
+                                margin-bottom: 15px;
+                                padding-bottom: 5px;
+    
+                                span {
+                                    color: #f5f5f5;
+                                    font-size: 26px;
+                                }
+                            }
+
+                            .row {
+                                display: grid;
+                                grid-template-columns: repeat(2,1fr);
+                                grid-gap: 20px;
+                                text-align: center;
+                                transition: 250ms all;
+
+                                &:hover {
+                                    background: #292929;
+                                    cursor: default;
+                                }
+
+                                span {
+                                    color: #f5f5f5;
+                                    font-size: 22px;
+                                }
+
+                                p {
+                                    color: #f5f5f5;
+                                    font-size: 22px;
+                                }
+                            }
+
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
