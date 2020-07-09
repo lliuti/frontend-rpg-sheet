@@ -11,7 +11,8 @@ btn.addEventListener('click', async function() {
     }
 
     const api = await axios.create({ 
-        baseURL: 'http://localhost:3333'
+        // baseURL: 'http://localhost:3333'
+        baseURL: 'https://backend-rpg-sheet.herokuapp.com'
     });
 
     const response = await api.post('/sendpassword', pass);
