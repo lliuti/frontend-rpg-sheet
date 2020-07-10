@@ -34,14 +34,21 @@
 * body {
   font-family: 'Dosis', sans-serif;
   background-color: #111;
-  overflow-y: hidden;
   background-image: url('carmo.jpg');
   background-size: cover;
+}
+* body::-webkit-scrollbar {
+  width: 10px;
+  background: #444;
+}
+* body::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 5px;
 }
 * body .password-wrapper {
   height: 100vh;
   width: 100%;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   margin-top: 200px;
@@ -106,31 +113,83 @@
 * body .sheet-wrapper {
   height: 100vh;
   width: 100%;
-  display: none;
+  display: flex;
   flex-direction: column;
 }
 * body .sheet-wrapper .header {
   padding: 50px 100px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+* body .sheet-wrapper .header .top {
+  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
 }
-* body .sheet-wrapper .header .picture {
+* body .sheet-wrapper .header .top .picture {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-* body .sheet-wrapper .header .picture img {
+* body .sheet-wrapper .header .top .picture img {
   width: 150px;
   border-radius: 50%;
   display: none;
 }
 @media screen and (max-width: 705px) {
-  * body .sheet-wrapper .header .picture img {
+  * body .sheet-wrapper .header .top .picture img {
     width: 75px;
   }
+}
+* body .sheet-wrapper .header .hp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
+}
+* body .sheet-wrapper .header .hp i {
+  color: #e94242;
+}
+* body .sheet-wrapper .header .hp h2 {
+  color: #fff;
+  margin: 0 20px;
+}
+* body .sheet-wrapper .header .hp .health-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+* body .sheet-wrapper .header .hp .health-buttons button {
+  border: 0;
+  border-radius: 5px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  margin: 2.5px 0;
+  font-size: 18px;
+  outline: 0;
+  cursor: pointer;
+  transition: 500ms all;
+}
+* body .sheet-wrapper .header .hp .health-buttons button i {
+  color: #333;
+}
+* body .sheet-wrapper .header .hp .health-buttons button#btnIncreaseHealth:hover {
+  background: #92f396;
+  transform: translateY(-2.5px);
+}
+* body .sheet-wrapper .header .hp .health-buttons button#btnDecreaseHealth:hover {
+  background: #f39292;
+  transform: translateY(-2.5px);
 }
 * body .sheet-wrapper .header .text {
   display: flex;
@@ -179,6 +238,7 @@
 * body .sheet-wrapper .sheet .info .box {
   padding: 25px 25px;
   background: #252525;
+  height: 360px;
 }
 * body .sheet-wrapper .sheet .info .box .row {
   display: grid;
@@ -225,6 +285,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 360px;
+  overflow-y: auto;
 }
 * body .sheet-wrapper .sheet .skills .group .box .skill-title {
   display: flex;

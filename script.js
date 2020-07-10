@@ -1,4 +1,35 @@
 const btn = document.getElementById('btn');
+const btnIncrese = document.getElementById('btnIncreaseHealth');
+const btnDecrease = document.getElementById('btnDecreaseHealth');
+const health = document.getElementById('cHealth');
+
+loadStorage();
+
+function loadStorage() {
+    //
+    health.textContent = 0;
+}
+
+function increaseNumber() {
+    const hp = parseInt(health.innerHTML);
+    health.textContent = hp + 1;
+    storage(hp);
+}
+
+function decreaseNumber() { 
+    const hp = parseInt(health.innerHTML);
+    if (hp < -5) {
+        return false;
+    }
+    health.textContent = hp - 1;
+    console.log(hp);
+    storage(hp);
+}
+    
+function storage(hp) {
+    // console.log(hp);
+    //
+}
 
 btn.addEventListener('click', async function() {
     const passInput = document.getElementById('pass');
@@ -93,3 +124,10 @@ btn.addEventListener('click', async function() {
     document.getElementById('sheet-wrapper').style.display = "flex";
 });
 
+btnIncreaseHealth.addEventListener('click', async function() {
+    increaseNumber(); 
+});
+
+btnDecrease.addEventListener('click', async function() {
+    decreaseNumber();
+});
